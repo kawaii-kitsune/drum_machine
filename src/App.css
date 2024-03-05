@@ -1,0 +1,73 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #2d2d2d;
+}
+
+#drum-machine {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjusted to 4 columns to resemble Akai MPC */
+  grid-gap: 10px;
+  max-width: 600px;
+  margin-top: 50px;
+}
+
+.drum-pad {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  font-size: 20px;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  border-radius: 5px; /* Rounded corners for a sleek look */
+}
+
+.drum-pad:hover {
+  background-color: #666;
+}
+
+.drum-pad:active {
+  transform: scale(0.95); /* Scale down when pressed */
+}
+
+#display {
+  grid-column: span 4;
+  width:500px; /* Adjusted to span 4 columns */
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 10px;
+  border-radius: 5px; /* Rounded corners for a sleek look */
+}
+
+.clip {
+  display: none;
+}
+
+#drum-machine .drum-pad:focus {
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+}
+
+/* Akai MPC-specific styling */
+#drum-machine {
+  background-color: #404040; /* Dark grey background */
+  border: 2px solid #777; /* Border for a more defined look */
+  border-radius: 10px; /* Rounded corners for the entire drum machine */
+}
+
+.drum-pad {
+  width: 100%; /* Full width for each drum pad */
+}
+
+#display {
+  margin-top: 10px; /* Adjusted margin for better spacing */
+}
